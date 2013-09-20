@@ -1,5 +1,7 @@
 ScrumInt::Application.routes.draw do
-  resources :teams
+  resources :teams do
+    resources :members
+  end
 
   get "home/index"
   # The priority is based upon order of creation:

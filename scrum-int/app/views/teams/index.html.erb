@@ -1,17 +1,15 @@
-<h1>Listing posts</h1>
+<h1>Team List</h1>
 
 <table>
   <tr>
     <th>Team Name</th>
-    <th>Member Id</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 <% @teams.each do |team| %>
   <tr>
-    <td><%= team.team_name %></td>
-    <td><%= team.member_id %></td>
+    <td><%= team.name %></td>
     <td><%= link_to 'Show', team %></td>
     <td><%= link_to 'Edit', edit_team_path(team) %></td>
     <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -22,4 +20,4 @@
 
 <br />
 
-<%= link_to 'New Post', new_team_path %>
+<%= link_to 'Add New Team', new_team_path %>

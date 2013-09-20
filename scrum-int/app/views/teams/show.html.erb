@@ -1,3 +1,37 @@
-<h1>SHow Teams</h1>
+<p id="notice"><%= notice %></p>
 
-<%= link_to 'Back', team_path %>
+<p>
+  <b>Team Name:</b>
+  <%= @team.name %>
+</p>
+
+<h2>Members</h2>
+<% @team.members.each do |member| %>
+  <p>
+    <b>Member:</b>
+    <%= member.name %>
+  </p>
+ 
+  <p>
+    <b>Email</b>
+    <%= member.email %>
+  </p>
+<% end %>
+ 
+<h2>Add a Member:</h2>
+<%= form_for([@team, @team.members.build]) do |f| %>
+  <div class="field">
+    <%= f.label :member_name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :member_email %><br />
+    <%= f.text_area :email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>

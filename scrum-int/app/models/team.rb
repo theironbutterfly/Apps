@@ -1,3 +1,5 @@
 class Team < ActiveRecord::Base
-  attr_accessible :member_id, :team_name
+  attr_accessible :name
+  validates :name,  :presence => true
+  has_many :members
 end
