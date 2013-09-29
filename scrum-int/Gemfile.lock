@@ -39,7 +39,7 @@ GEM
     coffee-script-source (1.6.3)
     diff-lcs (1.2.4)
     erubis (2.7.0)
-    execjs (2.0.1)
+    execjs (2.0.2)
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
@@ -89,7 +89,7 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
-    sass (3.2.10)
+    sass (3.2.11)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -120,4 +120,5 @@ DEPENDENCIES
   rspec-rails (~> 2.0)
   sass-rails (~> 3.2.3)
   sqlite3
+  therubyracer
   uglifier (>= 1.0.3)
