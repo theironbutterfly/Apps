@@ -16,9 +16,7 @@ describe TeamsController do
   describe "POST create" do
     it "creates a Team" do
       post :create, :team => { :name => "wipitgood", :email => "wipitgood@gmail.com"}
-      #expect(response).to redirect_to(assigns(:teams) assert_redirected_to)
-      expect(response).to redirect_to teams_path(assigns(:team)), :status => 302, 
-      	                                     :notice => "Team was successfully created."
+      expect(response).to redirect_to team_path(assigns(:team))
     end
   end
 end
