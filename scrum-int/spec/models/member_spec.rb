@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Member do
   it 'can successfully add a member to a team' do
-  	team = Team.create!(:name => "wip", :email => "wip@gmail.com")
+    team = Team.create!(:name => "wip", :email => "wip@gmail.com")
     member = Member.create! :name => "apoorva", :email => "apoorva@gmail.com"
     members = []
     members << member

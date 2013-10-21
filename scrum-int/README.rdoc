@@ -2,3 +2,6 @@
 
 This app will rotate members in a team randomly thereby selecting them for specific
 meetings
+
+Remember to run following before running specs! 
+bundle exec rake db:test:prepare
