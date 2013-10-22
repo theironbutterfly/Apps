@@ -1,6 +1,7 @@
 ScrumInt::Application.routes.draw do
   resources :teams do
     resources :members
+    resources :meetings
   end
 
   get "home/index"

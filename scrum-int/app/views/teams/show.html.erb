@@ -23,6 +23,28 @@
   </p>
 <% end %>
  
+<h2>Meetings</h2>
+<% @team.meetings.each do |meeting| %>
+  <p>
+    <b>Meeting Name:</b>
+    <%= meeting.name %>
+  </p>
+ 
+  <p>
+    <b>Meeting Start Time</b>
+    <%= meeting.start_time %>
+  </p>
+
+ <p>
+    <b>Meeting End Time</b>
+    <%= meeting.end_time %>
+  </p>
+
+
+<% end %>
+
+
+
 <h2>Add a Member:</h2>
 <%= form_for([@team, @team.members.build]) do |f| %>
   <div class="field">
@@ -37,6 +59,27 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<h2>Add Meeting:</h2>
+<%= form_for([@team, @team.meetings.build]) do |f| %>
+  <div class="field">
+    <%= f.label :meeting_name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :meeting_start_time %><br />
+    <%= f.text_field :start_time %>
+  </div>
+<div class="field">
+    <%= f.label :meeting_end_time %><br />
+    <%= f.text_field :end_time %>
+</div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
 
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>
